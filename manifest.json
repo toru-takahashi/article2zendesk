@@ -1,9 +1,10 @@
 {
   "name": "Zendesk Guide Transfer",
   "version": "0.0.1",
-  "description": "Transfer a page to Zendesk Guide",
+  "description": "Transfer article section in page to Zendesk Guide",
   "permissions": [
     "storage",
+    "tabs",
     "https://*.zendesk.com/"
   ],
   "manifest_version": 2,
@@ -13,9 +14,16 @@
     },
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/jquery.min.js","js/bootstrap.min.js", "js/popup.js"]
+    }
+  ],
   "icons" : {
     "128": "image/icon128.png"
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "options_ui": {
     "page": "options.html",
     "chrome_style": true

@@ -9,7 +9,7 @@ function save_profile() {
     password: password
   },
   function() {
-    document.getElementById('status').textContent = "Profile saved.";
+    document.getElementById('status').innerHTML = "Profile saved.";
   });
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "Article2Zendesk",
-  "version": "0.0.1",
+  "version": "0.0.",
   "description": "Transfer article section in page to Zendesk Guide",
   "permissions": [
     "storage",

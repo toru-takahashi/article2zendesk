@@ -154,7 +154,7 @@ function createArticle(event){
 
 function listSections(){
   chrome.storage.local.get(["subdomain", "email", "password"], function(zendesk) {
-    request_url = 'https://' + zendesk.subdomain +'.zendesk.com/api/v2/help_center/en-us/sections.json';
+    request_url = 'https://' + zendesk.subdomain +'.zendesk.com/api/v2/help_center/en-us/sections.json?sort_by=updated_at&sort_order=desc';
     $.ajax({
       url: request_url,
       type: 'GET',
